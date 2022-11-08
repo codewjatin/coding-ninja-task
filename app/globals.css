@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  background: white;
+  background-image: radial-gradient(
+      circle at 25px 25px,
+      lightgray 2%,
+      transparent 0%
+    ),
+    radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%);
+  background-size: 75px 75px;
+}
+
+svg {
+  shape-rendering: geometricprecision;
+  text-rendering: optimizeLegibility;
+}
+
+code::before,
+code::after {
+  content: '`';
+}
+
+code {
+  color: #d400ff;
+  white-space: pre-wrap;
+  letter-spacing: -1px;
+}
+
+svg.github-tag:hover path.octo-arm {
+  animation: octocat-wave 0.56s;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-20deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
